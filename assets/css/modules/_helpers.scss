@@ -1,0 +1,69 @@
+// Helpers
+
+.wrapper {
+	display: block;
+    position: relative;
+    max-width: $desktop;
+	margin: 0 auto;
+}
+
+.divider {
+	margin: 20px auto;
+	width: 130px;
+	height: 2px;
+	border: none;
+	background-color: $primary-color;
+}
+
+.row {
+	display: inline-block;
+	position: relative;
+}
+
+.clear {
+	display: block;
+	clear: both; 
+}
+
+.hide-text {
+	display: block;
+	text-indent: -9999px;
+}
+
+.block {
+	display: block;
+}
+
+.none {
+	display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.centered {
+	margin: 0 auto;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.column-half {
+	position: relative;
+	width: 50%;
+	display: inline-block;
+}

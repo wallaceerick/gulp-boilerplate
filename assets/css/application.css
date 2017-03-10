@@ -1,0 +1,79 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/* line 19, assets/css/modules/_sprite.scss */
+.icon-gulp {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -384px;
+  width: 197px;
+  height: 388px;
+}
+
+/* line 25, assets/css/modules/_sprite.scss */
+
+/* line 3, assets/css/application.scss */
+body {
+  background-color: #D6D6D6;
+}
+
+/* line 7, assets/css/application.scss */
+h1 {
+  color: red;
+}
+
+/* line 11, assets/css/application.scss */
+h2 {
+  color: purple;
+}
+
+/* line 15, assets/css/application.scss */
+
+/* line 19, assets/css/application.scss */
+.hidden {
+  display: none;
+}
+
+/* line 23, assets/css/application.scss */
+.sprite {
+  display: inline-block;
+}
+
+/* line 27, assets/css/application.scss */
+.block {
+  display: none;
+  align-items: center;
+  text-align: center;
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+}
+
+/* line 36, assets/css/application.scss */
+.block__element {
+  color: blue;
+}
+
+/* line 39, assets/css/application.scss */
+.block__element--modifier {
+  color: yellow;
+}
+
+/* line 45, assets/css/application.scss */
+.block.another {
+  display: flex;
+}

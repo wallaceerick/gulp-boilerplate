@@ -1,0 +1,29 @@
+{
+  "name": "gulp-boilerplate",
+  "version": "0.1.0",
+  "title": "Gulp Boilerplate",
+  "homepage": "https://github.com/wallaceerick/grunt-boilerplate",
+  "author": {
+    "name": "Wallace Erick",
+    "email": "wallace_erick@hotmail.com",
+    "url": "http://wallaceerick.com.br"
+  },
+  "description": "A base to start and deploy your project usign Grunt",
+  "devDependencies": {
+    "browser-sync": "2.6.5",
+    "gulp": "latest",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "0.0.8",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify": "0.0.15",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^2.1.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "gulp.spritesmith": "^6.3.0",
+    "jshint": "^2.9.4"
+  }
+}

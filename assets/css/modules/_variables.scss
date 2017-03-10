@@ -1,0 +1,33 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | Variables
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+// Colours 
+$primary-color:						#f67c27;
+$text-color: 						#323232;
+$title-color: 						#d6d6d5;
+$menu-color:						#cccccc;
+$white: 							#ffffff;
+
+// Fonts
+$freight: 							'Freight Text';
+$flama-semicondensed: 				'Flama Semicondensed';
+
+// Basic
+$base-font-family:              	$freight;
+$base-font-size:              		16px;
+$base-font-color:              		$text-color;
+
+// Sizes
+$desktop: 							1200px;
+$tablet: 							800px;
+$mobile: 						    435px;
+
+// Effects
+$linear: 							cubic-bezier(0, 0, 1, 1);
+$ease: 								cubic-bezier(0.25, 0.1, 0.25, 1);
+$ease-in: 							cubic-bezier(0.42, 0, 1, 1);
+$ease-out: 							cubic-bezier(0, 0, 0.58, 1);
+$ease-in-out: 						cubic-bezier(0.42, 0, 0.58, 1);

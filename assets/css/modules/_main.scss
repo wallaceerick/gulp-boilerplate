@@ -1,0 +1,48 @@
+body {
+	background-color: #D6D6D6;
+}
+
+h1 {
+	color: red;
+}
+
+h2 {
+	color: purple;
+}
+
+h3 {
+	color: green;
+}
+
+.hidden {
+	display: none;
+}
+
+.sprite {
+	display: inline-block;
+}
+
+.block {
+	display: none;
+	//	display: flex;
+  	align-items: center;
+	text-align: center;
+	border: 1px solid white;
+	width: 100px; 
+	height: 100px;
+	
+	&__element {
+		color: blue;
+		
+		&--modifier {
+			color: yellow;
+		}
+
+	}
+
+	&.another {
+		display: flex;
+		//@include sprite('sass');
+	}
+
+}

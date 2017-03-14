@@ -43,12 +43,16 @@ gulp.task('reload', () =>
 );
 
 gulp.task('js', () =>
-    gulp.src([src.js + 'app-*.js'])
-        .pipe(hint())
-        .pipe(hint.reporter('default'))
+    gulp.src([src.js + 'jquery-3.1.1.js', src.js + 'app-*.js'])
         .pipe(concat('application.js'))
         .pipe(uglify())
         .pipe(gulp.dest(src.js))
+);
+
+gulp.task('hint', () =>
+    gulp.src([src.js + 'application.js'])
+        .pipe(hint())
+        .pipe(hint.reporter('default'))
 );
 
 gulp.task('css', () =>

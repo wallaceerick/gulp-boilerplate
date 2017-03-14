@@ -1,11 +1,17 @@
+@charset "UTF-8";
+
 //  Mixins
-@import 'mixins/mixins';
+@import "mixins/mixins";
+
+//  Libraries
+@import "material/components";
 
 // Modules
-@import 'modules/variables';
-@import 'modules/reset';
-@import 'modules/helpers';
-@import 'modules/main';
-@import 'modules/sprite';
+@import "modules/variables",
+		"modules/normalize",
+		"modules/helpers",
+		"modules/buttons",
+		"modules/main",
+		"modules/sprite";
 
 // Partials

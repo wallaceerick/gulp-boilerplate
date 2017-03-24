@@ -1,0 +1,29 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | Config
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+// Bourbon Logs
+$output-bourbon-deprecation-warnings: false;
+
+// Tables
+$table-padding:             15px 10px;
+$table-hover:               $primary-color;
+$table-background:          #f5f5f7;
+$table-border:              #ececec;
+$table-head-border:         $table-hover;
+
+// Accordion
+$accordion-button-padding:  25px;
+$accordion-button-color:    $primary-color;
+$accordion-icon-size:       20px;
+$accordion-icon-color:      white;
+
+// Slider
+$slider-dots-color:         $primary-color;
+$slider-dots-size:          15px;
+
+// Forms
+$input-border:              #f5f5f7;
+$input-border-focus:        $primary-color;

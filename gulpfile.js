@@ -1,19 +1,19 @@
 // Modules
-const gulp     = require('gulp'),   
+const gulp     = require('gulp'),
 
       // CSS
       sass     = require('gulp-sass'),
-      uncss    = require('gulp-uncss'),
+      //uncss    = require('gulp-uncss'),
 
       // Images
       imagemin = require('gulp-imagemin'),
       sprite   = require('gulp.spritesmith'),
-      svg      = require('gulp-svgstore'),  
+      svg      = require('gulp-svgstore'),
 
       // JS
       concat   = require('gulp-concat'),
       hint     = require('gulp-jshint'),
-      uglify   = require('gulp-uglify'), 
+      uglify   = require('gulp-uglify'),
 
       // Utils
       watch    = require('gulp-watch')
@@ -43,7 +43,7 @@ gulp.task('reload', () =>
 );
 
 gulp.task('js', () =>
-    gulp.src([src.js + 'jquery-3.1.1.js', src.js + 'app-*.js'])
+    gulp.src([src.js + 'libraries/jquery-3.2.0.js', src.js + 'plugins/*.js', src.js + 'source/app-*.js'])
         .pipe(concat('application.js'))
         .pipe(uglify())
         .pipe(gulp.dest(src.js))
@@ -61,9 +61,9 @@ gulp.task('css', () =>
             outputStyle:    'expanded', //nested, compact, expanded, compressed
             sourceComments: 'map',
         }).on('error', sass.logError))
-        .pipe(uncss({
-            html: ['*.html']
-        }))
+        //.pipe(uncss({
+        //    html: ['*.html']
+        //}))
         .pipe(gulp.dest(src.css))
         .pipe(sync.stream())
 );
@@ -82,14 +82,14 @@ gulp.task('svg', () =>
 
 gulp.task('sprites', function () {
 
-      let spriteData = gulp.src(src.images + 'sprites/*.png').pipe(sprite({
-        imgName:   '../images/sprite.png',
-        cssFormat: 'css',
-        cssName:   '_sprite.scss'
-      }));
+    let spriteData = gulp.src(src.images + 'sprites/*.png').pipe(sprite({
+      imgName:   '../images/sprite.png',
+      cssFormat: 'css',
+      cssName:   '_sprites.scss'
+    }));
 
-      let imgStream = spriteData.img.pipe(gulp.dest(src.images));
-      let cssStream = spriteData.css.pipe(gulp.dest(src.css + 'modules/'));
+    let imgStream = spriteData.img.pipe(gulp.dest(src.images));
+    let cssStream = spriteData.css.pipe(gulp.dest(src.css + 'components/'));
 });
 
 gulp.task('watch', ['sync'], function(){

@@ -1,0 +1,64 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | Inputs
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+.gh-input {
+    position: relative;
+    margin-bottom: 35px;
+
+    #{$all-text-inputs} {
+        width: 100%;
+        padding: 10px;
+        font-size: rem(16px);
+        color: blue;
+        background-color: white;
+        border: none;
+        border-bottom: 1px solid red;
+
+        &:focus {
+            outline: 0;
+            ~ span {
+                width: 100%;
+                transition: all 0.35s ease;
+            }
+        }
+
+        &:focus ~ label,
+        &:valid ~ label,,
+        &.valid ~ label {
+            color: blue;
+            font-size: rem(14px);
+            top: -15px;
+            left: 0;
+            transition: all .2s ease;
+        }
+
+        &:invalid,
+        &.invalid {
+            box-shadow: none;
+        }
+
+        ~ span {
+            display: block;
+            @include size(0 3px);
+            @include position(absolute, null null 0 0);
+            background: blue;
+            transition: all .125s ease;
+        }
+    }
+    
+    // Fix border bug
+    textarea ~ span {
+        bottom: 2px;
+    }
+
+    label {
+        @include position(absolute, 10px null null 10px);
+        color: blue;
+        pointer-events: none;
+        transition: all .25s ease;
+    }
+
+}

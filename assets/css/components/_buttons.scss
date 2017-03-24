@@ -1,0 +1,31 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | Buttons
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+
+.gh-button {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    padding: 15px 25px;
+    color: white;
+    cursor: pointer;
+    background-color: #178CE7;
+    text-transform: uppercase;
+    border-radius: 3px;
+
+    &__effect {
+        display: block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 0px;
+        height: 0px;
+        background-color: yellow;
+        border-radius: 100%;
+        opacity: 0.5;
+    }
+
+} 

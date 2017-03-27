@@ -559,10 +559,10 @@ body {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  color: blue;
+  color: #008af6;
   background-color: white;
   border: none;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #e4e4e4;
 }
 
 /* line 20, assets/css/components/_inputs.scss */
@@ -610,11 +610,11 @@ body {
 .gh-input input:not([type]).valid ~ label, .gh-input textarea:focus ~ label,
 .gh-input textarea:valid ~ label,
 .gh-input textarea.valid ~ label {
-  color: blue;
+  color: #008af6;
   font-size: 0.875rem;
-  top: -15px;
+  top: -20px;
   left: 0;
-  transition: all .2s ease;
+  transition: all 0.3s ease;
 }
 
 /* line 38, assets/css/components/_inputs.scss */
@@ -630,8 +630,8 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: blue;
-  transition: all .125s ease;
+  background: #008af6;
+  transition: all 0.35s ease;
 }
 
 /* line 53, assets/css/components/_inputs.scss */
@@ -644,7 +644,7 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-  color: blue;
+  color: #008af6;
   pointer-events: none;
   transition: all .25s ease;
 }

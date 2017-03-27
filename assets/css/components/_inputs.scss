@@ -12,10 +12,10 @@
         width: 100%;
         padding: 10px;
         font-size: rem(16px);
-        color: blue;
-        background-color: white;
+        color: $input-text-color;
+        background-color: $input-bacakground-color;
         border: none;
-        border-bottom: 1px solid red;
+        border-bottom: 1px solid $input-border-color;
 
         &:focus {
             outline: 0;
@@ -28,11 +28,10 @@
         &:focus ~ label,
         &:valid ~ label,,
         &.valid ~ label {
-            color: blue;
+            color: $input-label-color;
             font-size: rem(14px);
-            top: -15px;
-            left: 0;
-            transition: all .2s ease;
+            @include position(absolute, -20px 0 null null);
+            transition: all 0.3s ease;
         }
 
         &:invalid,
@@ -44,11 +43,11 @@
             display: block;
             @include size(0 3px);
             @include position(absolute, null null 0 0);
-            background: blue;
-            transition: all .125s ease;
+            background: $input-line-focus;
+            transition: all 0.35s ease;
         }
     }
-    
+
     // Fix border bug
     textarea ~ span {
         bottom: 2px;
@@ -56,9 +55,9 @@
 
     label {
         @include position(absolute, 10px null null 10px);
-        color: blue;
+        color: $input-label-color;
         pointer-events: none;
-        transition: all .25s ease;
+        transition: all 0.25s ease;
     }
 
 }

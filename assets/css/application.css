@@ -174,12 +174,17 @@ sub {
   bottom: -0.25em;
 }
 
+/* line 183, assets/css/generic/_normalize.scss */
+i {
+  display: inline-block;
+}
+
 /* Embedded content
 ========================================================================== */
 /**
 * Remove border when inside `a` element in IE 8/9/10.
 */
-/* line 190, assets/css/generic/_normalize.scss */
+/* line 194, assets/css/generic/_normalize.scss */
 img {
   border: 0;
   max-width: 100%;
@@ -188,7 +193,7 @@ img {
 /**
 * Correct overflow not hidden in IE 9/10/11.
 */
-/* line 199, assets/css/generic/_normalize.scss */
+/* line 203, assets/css/generic/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -198,7 +203,7 @@ svg:not(:root) {
 /**
 * Address margin not present in IE 8/9 and Safari.
 */
-/* line 210, assets/css/generic/_normalize.scss */
+/* line 214, assets/css/generic/_normalize.scss */
 figure {
   margin: 1em 40px;
 }
@@ -206,7 +211,7 @@ figure {
 /**
 * Address differences between Firefox and other browsers.
 */
-/* line 218, assets/css/generic/_normalize.scss */
+/* line 222, assets/css/generic/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0;
@@ -215,7 +220,7 @@ hr {
 /**
 * Contain overflow in all browsers.
 */
-/* line 227, assets/css/generic/_normalize.scss */
+/* line 231, assets/css/generic/_normalize.scss */
 pre {
   overflow: auto;
 }
@@ -223,7 +228,7 @@ pre {
 /**
 * Address odd `em`-unit font size rendering in all browsers.
 */
-/* line 235, assets/css/generic/_normalize.scss */
+/* line 239, assets/css/generic/_normalize.scss */
 code,
 kbd,
 pre,
@@ -243,7 +248,7 @@ samp {
 *    Known issue: affects color of disabled elements.
 * 2. Correct font properties not being inherited.
 */
-/* line 257, assets/css/generic/_normalize.scss */
+/* line 261, assets/css/generic/_normalize.scss */
 button,
 input,
 optgroup,
@@ -258,7 +263,7 @@ textarea {
 /**
 * Address `overflow` set to `hidden` in IE 8/9/10/11.
 */
-/* line 270, assets/css/generic/_normalize.scss */
+/* line 274, assets/css/generic/_normalize.scss */
 button {
   overflow: visible;
 }
@@ -269,7 +274,7 @@ button {
 * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
 * Correct `select` style inheritance in Firefox.
 */
-/* line 281, assets/css/generic/_normalize.scss */
+/* line 285, assets/css/generic/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -282,7 +287,7 @@ select {
 * 3. Improve usability and consistency of cursor style between image-type
 *    `input` and others.
 */
-/* line 294, assets/css/generic/_normalize.scss */
+/* line 298, assets/css/generic/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -296,7 +301,7 @@ input[type="submit"] {
 /**
 * Re-set default cursor for disabled elements.
 */
-/* line 306, assets/css/generic/_normalize.scss */
+/* line 310, assets/css/generic/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -305,7 +310,7 @@ html input[disabled] {
 /**
 * Remove inner padding and border in Firefox 4+.
 */
-/* line 315, assets/css/generic/_normalize.scss */
+/* line 319, assets/css/generic/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -316,7 +321,7 @@ input::-moz-focus-inner {
 * Address Firefox 4+ setting `line-height` on `input` using `!important` in
 * the UA stylesheet.
 */
-/* line 326, assets/css/generic/_normalize.scss */
+/* line 330, assets/css/generic/_normalize.scss */
 input {
   line-height: normal;
 }
@@ -328,7 +333,7 @@ input {
 * 1. Address box sizing set to `content-box` in IE 8/9/10.
 * 2. Remove excess padding in IE 8/9/10.
 */
-/* line 338, assets/css/generic/_normalize.scss */
+/* line 342, assets/css/generic/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -342,7 +347,7 @@ input[type="radio"] {
 * `font-size` values of the `input`, it causes the cursor style of the
 * decrement button to change from `default` to `text`.
 */
-/* line 350, assets/css/generic/_normalize.scss */
+/* line 354, assets/css/generic/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -352,7 +357,7 @@ input[type="number"]::-webkit-outer-spin-button {
 * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
 * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
 */
-/* line 360, assets/css/generic/_normalize.scss */
+/* line 364, assets/css/generic/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -365,7 +370,7 @@ input[type="search"] {
 * Safari (but not Chrome) clips the cancel button when the search input has
 * padding (and `textfield` appearance).
 */
-/* line 371, assets/css/generic/_normalize.scss */
+/* line 375, assets/css/generic/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -374,7 +379,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
 * Define consistent border, margin, and padding.
 */
-/* line 380, assets/css/generic/_normalize.scss */
+/* line 384, assets/css/generic/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -384,7 +389,7 @@ fieldset {
 /**
 * 1. Correct `color` not being inherited in IE 8/9/10/11.
 */
-/* line 390, assets/css/generic/_normalize.scss */
+/* line 394, assets/css/generic/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -393,7 +398,7 @@ legend {
 /**
 * Remove default vertical scrollbar in IE 8/9/10/11.
 */
-/* line 398, assets/css/generic/_normalize.scss */
+/* line 402, assets/css/generic/_normalize.scss */
 textarea {
   overflow: auto;
 }
@@ -402,7 +407,7 @@ textarea {
 * Don't inherit the `font-weight` (applied by a rule above).
 * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
 */
-/* line 407, assets/css/generic/_normalize.scss */
+/* line 411, assets/css/generic/_normalize.scss */
 optgroup {
   font-weight: bold;
 }
@@ -412,13 +417,13 @@ optgroup {
 /**
 * Remove most spacing between table cells.
 */
-/* line 418, assets/css/generic/_normalize.scss */
+/* line 422, assets/css/generic/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 423, assets/css/generic/_normalize.scss */
+/* line 427, assets/css/generic/_normalize.scss */
 td,
 th {
   padding: 0;
@@ -449,7 +454,7 @@ th {
 }
 
 /* line 27, assets/css/generic/_helpers.scss */
-.none {
+.hidden {
   display: none;
 }
 
@@ -560,9 +565,9 @@ body {
   padding: 10px;
   font-size: 1rem;
   color: #008af6;
-  background-color: white;
+  background-color: #ffffff;
   border: none;
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px solid #cccccc;
 }
 
 /* line 20, assets/css/components/_inputs.scss */
@@ -612,17 +617,18 @@ body {
 .gh-input textarea.valid ~ label {
   color: #008af6;
   font-size: 0.875rem;
+  position: absolute;
   top: -20px;
-  left: 0;
+  right: 0;
   transition: all 0.3s ease;
 }
 
-/* line 38, assets/css/components/_inputs.scss */
+/* line 37, assets/css/components/_inputs.scss */
 .gh-input input[type="color"]:invalid, .gh-input input[type="color"].invalid, .gh-input input[type="date"]:invalid, .gh-input input[type="date"].invalid, .gh-input input[type="datetime"]:invalid, .gh-input input[type="datetime"].invalid, .gh-input input[type="datetime-local"]:invalid, .gh-input input[type="datetime-local"].invalid, .gh-input input[type="email"]:invalid, .gh-input input[type="email"].invalid, .gh-input input[type="month"]:invalid, .gh-input input[type="month"].invalid, .gh-input input[type="number"]:invalid, .gh-input input[type="number"].invalid, .gh-input input[type="password"]:invalid, .gh-input input[type="password"].invalid, .gh-input input[type="search"]:invalid, .gh-input input[type="search"].invalid, .gh-input input[type="tel"]:invalid, .gh-input input[type="tel"].invalid, .gh-input input[type="text"]:invalid, .gh-input input[type="text"].invalid, .gh-input input[type="time"]:invalid, .gh-input input[type="time"].invalid, .gh-input input[type="url"]:invalid, .gh-input input[type="url"].invalid, .gh-input input[type="week"]:invalid, .gh-input input[type="week"].invalid, .gh-input input:not([type]):invalid, .gh-input input:not([type]).invalid, .gh-input textarea:invalid, .gh-input textarea.invalid {
   box-shadow: none;
 }
 
-/* line 43, assets/css/components/_inputs.scss */
+/* line 42, assets/css/components/_inputs.scss */
 .gh-input input[type="color"] ~ span, .gh-input input[type="date"] ~ span, .gh-input input[type="datetime"] ~ span, .gh-input input[type="datetime-local"] ~ span, .gh-input input[type="email"] ~ span, .gh-input input[type="month"] ~ span, .gh-input input[type="number"] ~ span, .gh-input input[type="password"] ~ span, .gh-input input[type="search"] ~ span, .gh-input input[type="tel"] ~ span, .gh-input input[type="text"] ~ span, .gh-input input[type="time"] ~ span, .gh-input input[type="url"] ~ span, .gh-input input[type="week"] ~ span, .gh-input input:not([type]) ~ span, .gh-input textarea ~ span {
   display: block;
   height: 3px;
@@ -634,19 +640,19 @@ body {
   transition: all 0.35s ease;
 }
 
-/* line 53, assets/css/components/_inputs.scss */
+/* line 52, assets/css/components/_inputs.scss */
 .gh-input textarea ~ span {
   bottom: 2px;
 }
 
-/* line 57, assets/css/components/_inputs.scss */
+/* line 56, assets/css/components/_inputs.scss */
 .gh-input label {
   position: absolute;
   top: 10px;
   left: 10px;
   color: #008af6;
   pointer-events: none;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 /* line 9, assets/css/components/_accordion.scss */

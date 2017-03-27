@@ -43,7 +43,7 @@
             display: block;
             @include size(0 3px);
             @include position(absolute, null null 0 0);
-            background: $input-line-focus;
+            background: $input-focus-color;
             transition: all 0.35s ease;
         }
     }

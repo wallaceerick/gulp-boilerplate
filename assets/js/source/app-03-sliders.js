@@ -15,14 +15,13 @@ var Sliders = {
 
 			sliderElement.slick({
 				slidesPerRow:   3,
-				slidesToScroll: 3,
 				dots:           true,
 				centerMode:     true,
 				infinite:       false,
 				variableWidth:  false
 			});
 
-		} 
+		}
 
 	}
 

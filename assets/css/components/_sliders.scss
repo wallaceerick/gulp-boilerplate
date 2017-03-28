@@ -8,7 +8,7 @@
 .gh-slider {
     position: relative;
     display: block;
-    min-width: 900px;
+    max-width: 900px;
     margin: 0;
     @include user-select(none);
     -webkit-touch-callout: none;
@@ -92,32 +92,40 @@
         display: none;
     }
 
-    .slick-list {
-        .slick-loading & {
-            background: purple;
-        }
-    }
-
     // Arrows
     .slick-prev,
     .slick-next {
+        @include position(absolute, 50% null null null);
+        margin-top: -30px;
         cursor: pointer;
-        color: red;
         padding: 10px;
-        border: 1px solid red;
-        outline: none;
+        border-radius: 5px;
+        z-index: 10;
+        transition: all 0.3s $ease-out;
 
-        &:hover,
-        &:focus {
-            color: white;
-            background-color: red;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
         }
+
+        svg {
+            fill: $slider-arrow-button;
+            @include position(relative, 3px null null null);
+        }
+    }
+
+    .slick-prev {
+        left: 20px;
+    }
+
+    .slick-next {
+        right: 20px;
     }
 
     // Dots
     .slick-dots {
         display: block;
         text-align: center;
+        padding: 15px 0;
         width: 100%;
 
         li {

@@ -5,7 +5,7 @@ var Sliders = {
 	},
 
 	// Método para iniciar o slider
-	// depende do arquivo plugins/slick.js
+	// depende do arquivo plugins/slick-slider.js
 	slider: function(){
 
 		var sliderElement = $('.js-slider');
@@ -14,11 +14,10 @@ var Sliders = {
 		if(sliderElement.length > 0){
 
 			sliderElement.slick({
-				slidesPerRow:   3,
 				dots:           true,
-				centerMode:     true,
-				infinite:       false,
-				variableWidth:  false
+				infinite:       true,
+                prevArrow:      '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><svg width="40" height="40"><use xlink:href="#left"></svg></button>',
+                nextArrow:      '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><svg width="40" height="40"><use xlink:href="#right"></svg></button>',
 			});
 
 		}

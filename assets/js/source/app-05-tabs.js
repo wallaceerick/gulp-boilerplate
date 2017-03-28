@@ -1,6 +1,6 @@
 var Tabs = {
 
-	init: function(){ 
+	init: function(){
 		this.tabs();
 	},
 
@@ -29,5 +29,3 @@ var Tabs = {
 };
 
 Tabs.init();
-
-

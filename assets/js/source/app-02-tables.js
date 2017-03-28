@@ -36,11 +36,13 @@ var Tables = {
 
 	},
 
+	// Método para iniciar o slider
+	// depende do arquivo plugins/table-sorter.js
 	tableSorter: function(){
 
 		var tableElement = $('.js-table-sorter');
-
 		tableElement.tablesorter();
+		
 	}
 
 };

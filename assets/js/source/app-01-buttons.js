@@ -24,19 +24,19 @@ var Buttons = {
 					y = e.offsetY;
 
 				self.find(wave).remove();
-				self.prepend('<span class="gh-button__effect"></span>');
- 
+				self.prepend('<div class="gh-button__effect"></div>');
+
 				$(wave)
 					.css({
-						//'top': y,
-						//'left': x
+						'top': y,
+						'left': x
 					})
 					.animate({
-						//opacity: '0',
+						opacity: '0',
 						width: btnWidth * 2,
 						height: btnWidth * 2
 					}, 500, function() {
-						//self.find(wave).remove();
+						self.find(wave).remove();
 					});
 
 			});
@@ -48,5 +48,3 @@ var Buttons = {
 };
 
 Buttons.init();
-
-

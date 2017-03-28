@@ -500,12 +500,9 @@ h1 {
 
 /* line 12, assets/css/elements/_headings.scss */
 h2 {
-  color: purple;
-}
-
-/* line 16, assets/css/elements/_headings.scss */
-h3 {
-  color: green;
+  color: #44adff;
+  letter-spacing: -0.05em;
+  margin: 20px 0 15px;
 }
 
 /* line 7, assets/css/elements/_paragraphs.scss */
@@ -531,28 +528,35 @@ body {
   margin: 0 auto;
 }
 
-/* line 8, assets/css/components/_buttons.scss */
+/* line 7, assets/css/components/_buttons.scss */
 .gh-button {
+  cursor: pointer;
   display: inline-block;
   overflow: hidden;
   position: relative;
-  margin: 20px;
-  padding: 15px 25px;
-  color: white;
-  cursor: pointer;
-  background-color: #178CE7;
+  margin: 0 5px 5px 0;
+  padding: 15px 40px;
   text-transform: uppercase;
-  border-radius: 3px;
+  color: white;
+  background-color: #008af6;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
 }
 
-/* line 20, assets/css/components/_buttons.scss */
+/* line 21, assets/css/components/_buttons.scss */
+.gh-button:hover {
+  background-color: #006dc3;
+}
+
+/* line 25, assets/css/components/_buttons.scss */
 .gh-button__effect {
   display: block;
   position: absolute;
+  height: 0;
+  width: 0;
   transform: translate(-50%, -50%);
-  width: 0px;
-  height: 0px;
-  background-color: yellow;
+  background-color: black;
   border-radius: 100%;
   opacity: 0.5;
 }
@@ -851,47 +855,48 @@ body {
   float: left;
   height: 100%;
   min-height: 1px;
+  outline: none;
   text-align: center;
 }
 
-/* line 64, assets/css/components/_sliders.scss */
+/* line 65, assets/css/components/_sliders.scss */
 .gh-slider .slick-slide img {
   margin: 0 auto;
 }
 
-/* line 68, assets/css/components/_sliders.scss */
+/* line 69, assets/css/components/_sliders.scss */
 .gh-slider .slick-slide.slick-loading img {
   display: none;
 }
 
-/* line 72, assets/css/components/_sliders.scss */
+/* line 73, assets/css/components/_sliders.scss */
 .gh-slider .slick-slide.dragging img {
   pointer-events: none;
 }
 
-/* line 76, assets/css/components/_sliders.scss */
+/* line 77, assets/css/components/_sliders.scss */
 .slick-initialized .gh-slider .slick-slide {
   display: block;
 }
 
-/* line 80, assets/css/components/_sliders.scss */
+/* line 81, assets/css/components/_sliders.scss */
 .slick-loading .gh-slider .slick-slide {
   visibility: hidden;
 }
 
-/* line 84, assets/css/components/_sliders.scss */
+/* line 85, assets/css/components/_sliders.scss */
 .slick-vertical .gh-slider .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
 
-/* line 91, assets/css/components/_sliders.scss */
+/* line 92, assets/css/components/_sliders.scss */
 .gh-slider .slick-arrow.slick-hidden {
   display: none;
 }
 
-/* line 96, assets/css/components/_sliders.scss */
+/* line 97, assets/css/components/_sliders.scss */
 .gh-slider .slick-prev,
 .gh-slider .slick-next {
   position: absolute;
@@ -904,13 +909,13 @@ body {
   transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
 }
 
-/* line 106, assets/css/components/_sliders.scss */
+/* line 107, assets/css/components/_sliders.scss */
 .gh-slider .slick-prev:hover,
 .gh-slider .slick-next:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 110, assets/css/components/_sliders.scss */
+/* line 111, assets/css/components/_sliders.scss */
 .gh-slider .slick-prev svg,
 .gh-slider .slick-next svg {
   fill: #008af6;
@@ -918,17 +923,17 @@ body {
   top: 3px;
 }
 
-/* line 116, assets/css/components/_sliders.scss */
+/* line 117, assets/css/components/_sliders.scss */
 .gh-slider .slick-prev {
   left: 20px;
 }
 
-/* line 120, assets/css/components/_sliders.scss */
+/* line 121, assets/css/components/_sliders.scss */
 .gh-slider .slick-next {
   right: 20px;
 }
 
-/* line 125, assets/css/components/_sliders.scss */
+/* line 126, assets/css/components/_sliders.scss */
 .gh-slider .slick-dots {
   display: block;
   text-align: center;
@@ -936,13 +941,13 @@ body {
   width: 100%;
 }
 
-/* line 131, assets/css/components/_sliders.scss */
+/* line 132, assets/css/components/_sliders.scss */
 .gh-slider .slick-dots li {
   display: inline-block;
   margin: 0 5px;
 }
 
-/* line 135, assets/css/components/_sliders.scss */
+/* line 136, assets/css/components/_sliders.scss */
 .gh-slider .slick-dots li button {
   height: 10px;
   width: 10px;
@@ -955,12 +960,12 @@ body {
   transition: all 0.4s cubic-bezier(0, 0, 0.58, 1);
 }
 
-/* line 145, assets/css/components/_sliders.scss */
+/* line 146, assets/css/components/_sliders.scss */
 .gh-slider .slick-dots li button:hover {
   opacity: 0.6;
 }
 
-/* line 150, assets/css/components/_sliders.scss */
+/* line 151, assets/css/components/_sliders.scss */
 .gh-slider .slick-dots li.slick-active button {
   opacity: 1;
 }

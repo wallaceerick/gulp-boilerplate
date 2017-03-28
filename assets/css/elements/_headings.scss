@@ -10,9 +10,7 @@ h1 {
 }
 
 h2 {
-	color: purple;
-}
-
-h3 {
-	color: green;
+	color: lighten($primary-color, 15%);
+	letter-spacing: -0.05em;
+	margin: 20px 0 15px;
 }

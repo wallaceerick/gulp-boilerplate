@@ -502,12 +502,16 @@ h1 {
 h2 {
   color: #44adff;
   letter-spacing: -0.05em;
-  margin: 20px 0 15px;
 }
 
 /* line 7, assets/css/elements/_paragraphs.scss */
 p {
   line-height: 20px;
+}
+
+/* line 7, assets/css/elements/_lists.scss */
+ul, ol {
+  list-style-type: none;
 }
 
 /* line 7, assets/css/elements/_links.scss */
@@ -544,12 +548,17 @@ body {
   transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
 }
 
-/* line 21, assets/css/components/_buttons.scss */
+/* line 20, assets/css/components/_buttons.scss */
 .gh-button:hover {
   background-color: #006dc3;
 }
 
-/* line 25, assets/css/components/_buttons.scss */
+/* line 24, assets/css/components/_buttons.scss */
+.gh-button--back {
+  margin: 20px 0 10px 0;
+}
+
+/* line 28, assets/css/components/_buttons.scss */
 .gh-button__effect {
   display: block;
   position: absolute;
@@ -694,7 +703,7 @@ body {
   top: 3px;
 }
 
-/* line 35, assets/css/components/_accordion.scss */
+/* line 34, assets/css/components/_accordion.scss */
 .gh-accordion__button__icon:before, .gh-accordion__button__icon:after {
   content: '';
   height: 20px;
@@ -706,27 +715,27 @@ body {
   transition: 0.35s ease-out;
 }
 
-/* line 44, assets/css/components/_accordion.scss */
+/* line 43, assets/css/components/_accordion.scss */
 .gh-accordion__button__icon:after {
   transform: rotate(90deg);
 }
 
-/* line 50, assets/css/components/_accordion.scss */
+/* line 49, assets/css/components/_accordion.scss */
 .gh-accordion__button--active {
   background-color: #005faa;
 }
 
-/* line 56, assets/css/components/_accordion.scss */
+/* line 55, assets/css/components/_accordion.scss */
 .gh-accordion__button--active .gh-accordion__button__icon:after {
   opacity: 0;
 }
 
-/* line 59, assets/css/components/_accordion.scss */
+/* line 58, assets/css/components/_accordion.scss */
 .gh-accordion__button--active .gh-accordion__button__icon:before {
   transform: rotate(90deg);
 }
 
-/* line 66, assets/css/components/_accordion.scss */
+/* line 65, assets/css/components/_accordion.scss */
 .gh-accordion__panel {
   display: block;
   height: 0;
@@ -737,7 +746,7 @@ body {
   transition: height 0.2s ease-in-out;
 }
 
-/* line 74, assets/css/components/_accordion.scss */
+/* line 73, assets/css/components/_accordion.scss */
 .gh-accordion__panel p {
   font-size: 1.125em;
   line-height: 1.5625em;

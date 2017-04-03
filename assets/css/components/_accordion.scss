@@ -29,8 +29,7 @@
 	    &__icon {
 	    	width: $accordion-icon-size;
 	    	height: $accordion-icon-size;
-	    	position: relative;
-			top: 3px;
+			@include position(relative, 3px null null null);
 
 			&:before,
 			&:after {

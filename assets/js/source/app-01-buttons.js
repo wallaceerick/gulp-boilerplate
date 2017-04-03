@@ -13,7 +13,7 @@ var Buttons = {
 		if(buttonElement.length > 0){
 
 			buttonElement.on('click', function(e){
-				e.preventDefault();
+				//e.preventDefault();
 
 				var self = $(this),
 					wave = '.gh-button__effect',

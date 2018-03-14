@@ -4,20 +4,21 @@
 // |------------------------------------------------------
 // |------------------------------------------------------
 
-.gh-table {
+.table {
 	position: relative;
 	width: 100%;
 	max-width: 100%;
 	margin-bottom: 30px;
 
 	// Fixed Header
-	&.gh-fixed-header {
+	&.fixed-header {
 		margin-top: 50px;
 	    
 	    > thead {
 			@include position(fixed, 0 0 null 0);
 			width: 100%;
-	    	display: table;
+			display: table;
+			z-index: 5;
 	    }
 	} 
 	
@@ -35,7 +36,7 @@
 				padding: $table-padding;
 				width: 25%;
 				border-bottom: 1px solid $table-border;
-				@include transition(all 0.125s ease-out);
+				transform: all 0.125s ease-out;
 			}
 		}
 	}
@@ -88,12 +89,12 @@
 }
 
 // Responsive
-.gh-responsive-table {
+.responsive-table {
 
 	@include screen('tablet landscape'){
 
 		// Tighten up spacing
-		> .gh-table {
+		> .table {
 
 			> thead,
 			> tfoot {

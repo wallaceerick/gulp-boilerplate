@@ -18,26 +18,32 @@
 			<div style="height: 30px;"></div>
 
 			<form action="#">
-				<div class="gh-input">
-			    	<input type="text" required="" />
+				<div class="input">
+			    	<input type="text" required />
 			    	<label >Name</label>
 			    	<span></span>
 			  	</div>
 
-				<div class="gh-input">
-			    	<input type="email" required="" />
+				  <div class="input">
+			    	<input type="email" required />
 			    	<label>E-mail</label>
 			    	<span></span>
-			  	</div>
+				</div>
 
-				<div class="gh-input">
-			    	<textarea required=""></textarea>
+				<div class="input">
+			    	<input class="js-get-address js-mask-cep" required maxlength="8" />
+			    	<label>CEP</label>
+			    	<span></span>
+				</div>
+
+				<div class="input">
+			    	<textarea class="js-set-address" required></textarea>
 			    	<label>Mensagem</label>
 			    	<span></span>
 			  	</div>
 			</form>
 
-			<a href="index.html" class="gh-button gh-button--back">Voltar</a>
+			<a href="index.html" class="button button--back">Voltar</a>
 
 		</div>
 

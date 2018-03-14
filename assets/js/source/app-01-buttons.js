@@ -16,15 +16,15 @@ var Buttons = {
 				//e.preventDefault();
 
 				var self = $(this),
-					wave = '.gh-button__effect',
+					wave = '.button__effect',
 					/* Get the width of button (if different buttons types) */
 					btnWidth = self.outerWidth(),
-					btnHeight = self.outerHeight(),
+					//btnHeight = self.outerHeight(),
 					x = e.offsetX,
 					y = e.offsetY;
 
 				self.find(wave).remove();
-				self.prepend('<div class="gh-button__effect"></div>');
+				self.prepend('<div class="button__effect"></div>');
 
 				$(wave)
 					.css({

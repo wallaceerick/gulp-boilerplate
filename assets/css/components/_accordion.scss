@@ -4,7 +4,7 @@
 // |------------------------------------------------------
 // |------------------------------------------------------
 
-.gh-accordion {
+.accordion {
 
 	&__button {
 	    display: flex;
@@ -34,7 +34,7 @@
 			&:before,
 			&:after {
 			    content: '';
-            	@include size(3px $accordion-icon-size);
+            	@include size(3px, $accordion-icon-size);
             	@include position(absolute, 0px null null);
 			    position: absolute;
 			    background-color: $accordion-icon-color;
@@ -64,7 +64,7 @@
 
 	&__panel {
 		display: block;
-        @include size(100% 0);
+        @include size(100%, 0);
 	    padding: 0 18px;
 	    background-color: white;
 	    overflow: hidden;

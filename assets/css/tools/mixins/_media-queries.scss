@@ -6,22 +6,25 @@
 // |------------------------------------------------------
 // |------------------------------------------------------
 
+/// Variables used in media queries and flexbox grid
+$flexboxgrid-breakpoints: (
+    'xs':   30rem, //480px
+    'sm':   48rem, //768px
+    'md':   62rem, //992px
+    'lg':   75rem  //1200px
+);
+
+/// An mixin to write custom sizes of media queries
 @mixin breakpoint($size) {
     @media only screen and (max-width : $size + px) {
     	@content;
     }
 }
 
-$breakpoints: (
-    'mobile':        	 480px,
-    'mobile landscape':  767px,
-    'tablet': 			 820px,
-    'tablet landscape':  991px
-);
-
+/// An mixin to map and write media queries
 @mixin screen($width, $type: max) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
+    @if map_has_key($flexboxgrid-breakpoints, $width) {
+        $width: map_get($flexboxgrid-breakpoints, $width);
         //@if $type == max {
         //    $width: $width - 1px;
         //}

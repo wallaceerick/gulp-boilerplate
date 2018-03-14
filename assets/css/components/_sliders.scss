@@ -5,12 +5,12 @@
 // |------------------------------------------------------
 
 
-.gh-slider {
+.slider {
     position: relative;
     display: block;
     max-width: 900px;
     margin: 0;
-    @include user-select(none);
+    user-select: none;
     -webkit-touch-callout: none;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
@@ -18,7 +18,7 @@
 
     .slick-track,
     .slick-list {
-        @include transform(translate3d(0, 0, 0));
+        transform: translate3d(0, 0, 0);
     }
 
     .slick-list {
@@ -47,7 +47,7 @@
         }
 
         &:after {
-            clear: both;
+            @include clearfix;
         }
 
         .slick-loading & {
@@ -134,8 +134,8 @@
             margin: 0 5px;
 
             button {
-                @include size($slider-dots-size $slider-dots-size);
-                @extend .hide-text;
+                @include size($slider-dots-size, $slider-dots-size);
+                @include hide-text;
                 border: none;
                 background-color: $slider-dots-color;
                 cursor: pointer;

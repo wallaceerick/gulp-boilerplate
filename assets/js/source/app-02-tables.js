@@ -21,7 +21,7 @@ var Tables = {
 			window.addEventListener('scroll', function(){
 
 				var scrollTop  = $(window).scrollTop(),
-					fixedClass = 'gh-fixed-header';
+					fixedClass = 'fixed-header';
 
 				if (scrollTop > headerPosition) {
 					tableElement.addClass(fixedClass);

@@ -4,20 +4,12 @@
 // |------------------------------------------------------
 // |------------------------------------------------------
 
-.row {
-	display: inline-block;
-	position: relative;
-}
-
 .clear {
-	display: block;
-	clear: both;
+	@include clearfix;
 }
 
 .hide-text {
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+	@include hide-text;
 }
 
 .block {
@@ -28,19 +20,27 @@
 	display: none;
 }
 
-.center {
-	text-align: center;
-}
-
-.auto {
+.centered {
 	margin: 0 auto;
 }
 
-.left {
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.pull-left {
 	float: left;
 }
 
-.right {
+.pull-right {
 	float: right;
 }
 

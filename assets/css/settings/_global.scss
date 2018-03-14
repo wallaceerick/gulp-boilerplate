@@ -7,6 +7,13 @@
 // Bourbon Logs
 $output-bourbon-deprecation-warnings: false;
 
+// Transitions
+$base-duration:             0.2s;
+$base-timing:               $ease-out;
+
+// Spacing
+$content-spacing:           10px;
+
 // Tables
 $table-padding:             15px 10px;
 $table-hover:               $primary-color;
@@ -18,6 +25,10 @@ $table-head-border:         $table-hover;
 $button-primary-color:      white;
 $button-primary-background: $primary-color;
 $button-wave-color:         black;
+
+// Focus
+$focus-outline-color:       transparentize($primary-color, 0.4);
+$focus-outline-width:       0 0 0 3px;
 
 // Accordion
 $accordion-button-padding:  25px;

@@ -4,7 +4,7 @@
 // |------------------------------------------------------
 // |------------------------------------------------------
 
-.gh-button {
+.button {
     cursor: pointer;
     display: inline-block;
     overflow: hidden;
@@ -17,8 +17,14 @@
     border: none;
     border-radius: 5px;
     transition: all 0.3s $ease-out;
+
     &:hover {
+        color: $button-primary-color;
         background-color: darken($button-primary-background, 10%);
+    }
+
+    &:focus {
+        box-shadow: $focus-outline-width $focus-outline-color;
     }
 
     &--back {
@@ -28,7 +34,7 @@
     &__effect {
         display: block;
         position: absolute;
-        @include size(0 0);
+        @include size(0, 0);
         transform: translate(-50%, -50%);
         background-color: $button-wave-color;
         border-radius: 100%;

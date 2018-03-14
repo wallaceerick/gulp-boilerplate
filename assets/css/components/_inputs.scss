@@ -4,7 +4,7 @@
 // |------------------------------------------------------
 // |------------------------------------------------------
 
-.gh-input {
+.input {
     position: relative;
     margin-bottom: 35px;
 
@@ -26,11 +26,11 @@
         }
 
         &:focus ~ label,
-        &:valid ~ label,,
+        &:valid ~ label,
         &.valid ~ label {
+            @include position(absolute, -20px 0 null null);
             color: $input-label-color;
             font-size: rem(14px);
-            @include position(absolute, -20px 0 null null);
             transition: all 0.3s ease;
         }
 
@@ -41,10 +41,10 @@
 
         ~ span {
             display: block;
-            @include size(0 3px);
+            @include size(0, 3px);
             @include position(absolute, null null 0 0);
             background: $input-focus-color;
-            transition: all 0.35s ease;
+            transition: all 0.35s ease; 
         }
     }
 

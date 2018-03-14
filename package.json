@@ -1,29 +1,32 @@
 {
-  "name": "gulp-boilerplate",
-  "version": "0.1.0",
-  "title": "Gulp Boilerplate",
-  "homepage": "https://github.com/wallaceerick/grunt-boilerplate",
-  "author": {
-    "name": "Wallace Erick",
-    "email": "wallace_erick@hotmail.com",
-    "url": "http://wallaceerick.com.br"
-  },
-  "description": "A base to start and deploy your project usign Grunt",
-  "devDependencies": {
-    "browser-sync": "2.6.5",
-    "gulp": "latest",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect-php": "0.0.8",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-jshint": "^2.0.4",
-    "gulp-minify": "0.0.15",
-    "gulp-sass": "^3.1.0",
-    "gulp-svgstore": "^6.1.0",
-    "gulp-uglify": "^2.1.0",
-    "gulp-uncss": "^1.0.6",
-    "gulp-util": "^3.0.8",
-    "gulp-watch": "^4.3.11",
-    "gulp.spritesmith": "^6.3.0",
-    "jshint": "^2.9.4"
-  }
+	"name": "gulp-boilerplate",
+	"version": "0.1.0",
+	"title": "Gulp Boilerplate",
+	"homepage": "https://github.com/wallaceerick/grunt-boilerplate",
+	"author": {
+		"name": "Wallace Erick",
+		"email": "wallace_erick@hotmail.com",
+		"url": "http://wallaceerick.com.br"
+	},
+	"description": "A base to start and deploy your project usign Grunt",
+	"devDependencies": {
+		"bourbon": "^5.0.0",
+		"browser-sync": "2.6.5",
+		"gulp": "^3.9.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-jshint": "^2.1.0",
+		"gulp-minify": "^2.1.0",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-sass": "^3.1.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-svgstore": "^6.1.1",
+		"gulp-uglify": "2.1.0",
+		"gulp-watch": "^4.3.11",
+		"gulp.spritesmith": "^6.9.0",
+		"jshint": "^2.9.5",
+		"jshint-stylish": "^2.2.1",
+		"sassdoc": "^2.5.0"
+	}
 }

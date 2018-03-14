@@ -10,12 +10,14 @@ var Tabs = {
 
 		var tabElement = $('.js-tabs');
 
+		console.beer('Drunk...');
+
 		// Verifica se existe um botão na página
 		if(tabElement.length > 0){
 
 			tabElement.tabslet({
 				animation: true,
-				container: '.gh-tabs__content'
+				container: '.js-tabs-content'
 			});
 
 			tabElement.on('_after', function() {

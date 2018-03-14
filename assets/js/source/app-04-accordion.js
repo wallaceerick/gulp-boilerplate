@@ -4,7 +4,7 @@ var Accordion = {
 
         var accordions = document.querySelectorAll('.js-accordion-button');
 
-        accordions.forEach(function(item, i) {
+        accordions.forEach(function(item) {
             item.addEventListener('click', Accordion.open);
         });
 
@@ -17,7 +17,7 @@ var Accordion = {
         return height + 'px';
     },
 
-    open: function(accordions) {
+    open: function() {
 
         var panel       = this.nextElementSibling,
             panelHeight = Accordion.height(panel);
@@ -29,10 +29,10 @@ var Accordion = {
             panel.style.height = panelHeight;
         }
 
-        this.classList.toggle('gh-accordion__button--active');
+        this.classList.toggle('accordion__button--active');
 
     }
 
-}
+};
 
 Accordion.init();

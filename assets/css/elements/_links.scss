@@ -5,5 +5,15 @@
 // |------------------------------------------------------
 
 a {
-	color: blue;
+	color: $primary-color;
+	transition: all $base-duration $base-timing;
+
+	&:hover {
+		color: shade($primary-color, 25%);
+	}
+
+	&:focus {
+		outline: lighten($primary-color, 30%);
+		outline-offset: 3px;
+	}
 }

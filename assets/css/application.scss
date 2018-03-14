@@ -3,34 +3,72 @@
 // the DOM. We are also using this in combination of BEM and name spacing.
 // https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
 
-// Settings: Global variables, config and  colors definitions.
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | SETTINGS
+// | Global variables, config and colors definitions.
+// | Variáveis globais, configurações, definições de cores e animações.
+// |------------------------------------------------------
+// |------------------------------------------------------
 @import "settings/colors",
-		"settings/global",
 		"settings/fonts",
-		"settings/screens",
-		"settings/easing";
+		"settings/grid",
+		"settings/easing",
+		"settings/global"; 
 
-// Tools: Libraries, mixins and functions.
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | TOOLS
+// | Libraries, mixins and functions.
+// | Bibliotecas, mixins e funções.
+// |------------------------------------------------------
+// |------------------------------------------------------	  
 @import "tools/mixins",
-		"tools/bourbon";
+		"bourbon";
 
-// Generic: Ground-zero styles (normalize, reset, box-sizing).
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | GENERIC
+// | Ground-zero styles (normalize, reset and etc...)
+// | Estilos iniciais (normalize, reset e etc...)
+// |------------------------------------------------------
+// |------------------------------------------------------			
 @import "generic/normalize",
 		"generic/helpers";
 
-// Elements: Unclassed HTML elements (type selectors).
-@import "elements/headings",
-		"elements/paragraphs",
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | ELEMENTS
+// | Unclassed HTML elements (type selectors).
+// | Tags HTML resetadas e estilizadas sem a utilização de classes.
+// |------------------------------------------------------
+// |------------------------------------------------------		 
+@import "elements/typography",
 		"elements/lists",
+		"elements/media",
+		"elements/tables",
 		"elements/links";
 
-// Objects: Class-based selectors which define undecorated design patterns.
-@import "objects/header",
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | OBJECTS
+// | Class-based selectors which define undecorated design patterns.
+// | Seletores baseados em classes que controlam a estrutura da aplicação.
+// |------------------------------------------------------
+// |------------------------------------------------------		
+@import "objects/grid",
+		"objects/header",
 		"objects/sidebar",
 		"objects/footer",
 		"objects/layout";
 
-// Components: Designed components, chunks of UI.
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | COMPONENTS
+// | Designed components, chunks of UI, plugins e etc.
+// | Estilos dos componentes da aplicação, UI, plugins e etc.
+// |------------------------------------------------------
+// |------------------------------------------------------		   
 @import "components/buttons",
 		"components/inputs",
 		"components/accordion",
@@ -40,5 +78,11 @@
 		"components/tables",
 		"components/sprites";
 
-// Trumps: Utilities and helper classes with ability to override anything which goes before in the triangle.
-@import "trumps/overrides";
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | TRUMPS
+// | Utilities and helper classes with ability to override anything which goes before in the triangle.
+// | Utilitários e classes com a habilidade de sobrescrever estilos e elementos que aparecem em camadas superiores do triângulo.
+// |------------------------------------------------------
+// |------------------------------------------------------	   
+@import "trumps/useless";

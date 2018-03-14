@@ -1,10 +1,11 @@
 // |------------------------------------------------------
 // |------------------------------------------------------
-// | Mixins.scss
-// | @author Wallace Erick <wallaceerick.dev@gmail.com>
-// | @version 2.1.1
+// | Mixins
 // |------------------------------------------------------
 // |------------------------------------------------------
 
-@import "mixins/media-queries",
-		"mixins/vertical-align";
+@import "mixins/flex",
+		"mixins/em",
+		"mixins/rem",
+		"mixins/media-queries",
+		"mixins/vertical-align"

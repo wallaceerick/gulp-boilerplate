@@ -18,7 +18,7 @@ var Sliders = {
 				infinite:       true,
                 prevArrow:      '<svg class="slick-prev"><use xlink:href="assets/images/svg.svg#left"></svg>',
                 nextArrow:      '<svg class="slick-next"><use xlink:href="assets/images/svg.svg#right"></svg>',
-			}); 
+			});
 
 		}
 

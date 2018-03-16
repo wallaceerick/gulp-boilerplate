@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
 
-		<title>Inputs</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
 
-		<link rel="stylesheet" href="assets/css/application.css">
-	</head>
+	<title>Inputs</title>
 
-	<body>
+	<link rel="stylesheet" href="assets/css/application.css">
+</head>
 
-		<div class="wrapper">
+<body>
 
-			<h1>Inputs</h1>
+	<div class="wrapper">
 
-			<div style="height: 30px;"></div>
+		<h1>Inputs</h1>
 
-			<form action="#">
-				<div class="input">
-			    	<input type="text" required />
-			    	<label >Name</label>
-			    	<span></span>
-			  	</div>
+		<form action="#">
+			<div class="input">
+				<input id="name" type="text" required>
+				<label for="name">Name</label>
+				<span></span>
+			</div>
 
-				  <div class="input">
-			    	<input type="email" required />
-			    	<label>E-mail</label>
-			    	<span></span>
-				</div>
+			<div class="input">
+				<input id="email" type="email" required>
+				<label for="email">E-mail</label>
+				<span></span>
+			</div>
 
-				<div class="input">
-			    	<input class="js-get-address js-mask-cep" required maxlength="8" />
-			    	<label>CEP</label>
-			    	<span></span>
-				</div>
+			<div class="input">
+				<input id="cep" class="js-get-address js-mask-cep" type="text" required maxlength="8">
+				<label for="cep">CEP</label>
+				<span></span>
+			</div>
 
-				<div class="input">
-			    	<textarea class="js-set-address" required></textarea>
-			    	<label>Mensagem</label>
-			    	<span></span>
-			  	</div>
-			</form>
+			<div class="input">
+				<textarea id="message" class="js-set-address" required></textarea>
+				<label for="message">Mensagem</label>
+				<span></span>
+			</div>
+		</form>
 
-			<a href="index.html" class="button button--back">Voltar</a>
+		<a href="index.html" class="button button--back">Voltar</a>
 
-		</div>
+	</div>
 
-		<script src="assets/js/application.js"></script>
+	<script src="assets/js/application.js"></script>
 
-	</body>
+</body>
+
 </html>

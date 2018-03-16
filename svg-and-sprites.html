@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
 
-		<title>SVG and Sprites</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
 
-		<link rel="stylesheet" href="assets/css/application.css">
-	</head>
+	<title>SVG and Sprites</title>
 
-	<body>
+	<link rel="stylesheet" href="assets/css/application.css">
+</head>
 
-		<div class="wrapper">
-			<h1>SVG with Sprites</h1>
+<body>
 
-		 	<svg width="40" height="40">
-		 		<use xlink:href="assets/images/svg.svg#left">
-		 	</svg>
+	<div class="wrapper">
+		<h1>SVG with Sprites</h1>
 
-			<svg width="40" height="40">
-		 		<use xlink:href="assets/images/svg.svg#right">
-		 	</svg>
+		<svg class="svg">
+			<use xlink:href="assets/images/svg.svg#left"></use>
+		</svg>
 
-			<h1>Images with Sprites</h1>
+		<svg class="svg">
+			<use xlink:href="assets/images/svg.svg#right"></use>
+		</svg>
 
-			<i class="sprite icon-gulp"></i>
+		<h1>Images with Sprites</h1>
 
-			<div class="clear"></div>
+		<div class="sprite icon-gulp"></div>
 
-			<a href="index.html" class="button button--back">Voltar</a>
+		<div class="clear"></div>
 
-		</div>
+		<a href="index.html" class="button button--back">Voltar</a>
 
-		<script src="assets/js/application.js"></script>
+	</div>
 
-	</body>
+	<script src="assets/js/application.js"></script>
+
+</body>
+
 </html>

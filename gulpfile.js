@@ -1,6 +1,10 @@
 // Modules
 const gulp     = require('gulp'),
 
+	  // HTML
+	  includes = require('gulp-file-include'),
+	  htmlmin  = require('gulp-html-minifier'),
+
       // CSS
       sass     = require('gulp-sass'),
       maps     = require('gulp-sourcemaps'),
@@ -15,10 +19,10 @@ const gulp     = require('gulp'),
       concat   = require('gulp-concat'),
 	  uglify   = require('gulp-uglify'),
 
-	  // Validator
-	  jshint   = require('gulp-jshint'),   // http://bit.ly/2Dvq9P0
-	  htmlhint = require('gulp-htmlhint'), // http://bit.ly/206FrQB
-	  htmllint = require('gulp-htmllint'),
+	  // Code Quality
+	  jshint   = require('gulp-jshint'),    // http://bit.ly/2Dvq9P0
+	  htmllint = require('gulp-htmllint'),  // http://bit.ly/2ph586q
+	  scsslint = require('gulp-scss-lint'), // http://bit.ly/1JPTmAG
 
 	  // Documentation
       sassdoc  = require('sassdoc'),
@@ -29,13 +33,17 @@ const gulp     = require('gulp'),
       plumber  = require('gulp-plumber'),
       sync     = require('browser-sync');
 
-// Directories
-const assets = './assets';
+const env = {
+    source:    './source/',
+    build:     './build/'
+};
 const src = {
-    css:    `${assets}/css/`,
-    js:     `${assets}/js/`,
-    svg:    `${assets}/svg/`,
-    images: `${assets}/images/`
+    css:    'assets/css/',
+    js:     'assets/js/',
+    svg:    'assets/svg/',
+    images: 'assets/images/',
+    fonts:  'assets/fonts/',
+    videos: 'assets/videos/'
 };
 const errors = {
 	title:   'Ooops...',
@@ -46,7 +54,7 @@ const errors = {
 gulp.task('sync', () =>
     sync({
         server: {
-            baseDir: './'
+            baseDir: env.build
         }
     })
 );
@@ -56,7 +64,11 @@ gulp.task('reload', () =>
 );
 
 gulp.task('js', () =>
-    gulp.src([src.js + 'libraries/jquery-3.2.0.js', src.js + 'plugins/*.js', src.js + 'source/app-*.js'])
+    gulp.src([
+			env.source + src.js + 'libraries/jquery-3.2.0.js',
+			env.source + src.js + 'plugins/*.js',
+			env.source + src.js + 'source/app-*.js'
+		])
         .pipe(plumber({
             errorHandler: notify.onError(errors)
         }))
@@ -64,40 +76,12 @@ gulp.task('js', () =>
         .pipe(maps.init())
         .pipe(uglify())
         .pipe(maps.write('./'))
-        .pipe(gulp.dest(src.js))
+        .pipe(gulp.dest(env.build + src.js))
         .pipe(sync.stream())
 );
 
-gulp.task('js-hint', () =>
-    gulp.src([src.js + 'source/app-*.js'])
-        .pipe(plumber({
-            errorHandler: notify.onError(errors)
-        }))
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-);
-
-gulp.task('html-hint', () =>
-    gulp.src(['./*.html'])
-        .pipe(plumber({
-            errorHandler: notify.onError(errors)
-        }))
-        .pipe(htmlhint())
-		.pipe(htmlhint.reporter(''))
-		// .pipe(htmlhint.failReporter())
-);
-
-gulp.task('html-lint', () =>
-    gulp.src(['./*.html'])
-        .pipe(plumber({
-            errorHandler: notify.onError(errors)
-        }))
-        .pipe(htmllint())
-		.pipe(htmlhint.failOnError())
-);
-
 gulp.task('css', () =>
-    gulp.src(src.css + '**/*.scss')
+    gulp.src(env.source + src.css + '**/*.scss')
         .pipe(plumber({
             errorHandler: notify.onError(errors)
         }))
@@ -107,46 +91,111 @@ gulp.task('css', () =>
             sourcemaps:     true,
             includePaths:   [bourbon]
         }).on('error', sass.logError))
-        .pipe(gulp.dest(src.css))
+        .pipe(gulp.dest(env.build + src.css))
         .pipe(sync.stream())
 );
 
-gulp.task('images', () =>
-    gulp.src(src.images + 'hd/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest(src.images))
+gulp.task('html', () =>
+	gulp.src([env.source + '*.html'])
+	.pipe(plumber({
+		errorHandler: notify.onError(errors)
+	}))
+	.pipe(includes())
+	.pipe(htmlmin({
+		collapseWhitespace: true
+	}))
+	.pipe(gulp.dest(env.build))
+	.on('end', function() {
+		sync.reload()
+	})
 );
 
 gulp.task('svg', () =>
-    gulp.src(src.svg + '*.svg')
+    gulp.src(env.source + src.svg + '*.svg')
         .pipe(svg())
-        .pipe(gulp.dest(src.images))
-);
-
-gulp.task('sass-docs', () =>
-    gulp.src(src.css + '**/*.scss')
-    .pipe(sassdoc())
+        .pipe(gulp.dest(env.source + src.images))
 );
 
 gulp.task('sprites', function () {
-    let spriteData = gulp.src(src.images + 'sprites/*.png').pipe(sprite({
-        imgName:   '../images/sprite.png',
+    let spriteData = gulp.src(env.source + src.images + 'sprites/*.png').pipe(sprite({
+        imgName:   '../images/sprites.png',
         cssFormat: 'css',
         cssName:   '_sprites.scss'
     }));
 
-    let imgStream = spriteData.img.pipe(gulp.dest(src.images));
-    let cssStream = spriteData.css.pipe(gulp.dest(src.css + 'components/'));
+    let imgStream = spriteData.img.pipe(gulp.dest(env.source + src.images));
+    let cssStream = spriteData.css.pipe(gulp.dest(env.source + src.css + 'components/'));
 });
 
-gulp.task('watch', ['sync'], function(){
-    gulp.watch(src.css + '**/*.scss', ['css']);
-    gulp.watch([src.js + '**/*.js', '!./assets/js/application.js'], ['js']);
-    gulp.watch('*.html',              ['css', 'reload']);
+gulp.task('images', ['sprites', 'svg'], () =>
+    gulp.src([env.source + src.images + '*.{jpg,png,gif,svg}', '!./assets/images/sprites/'])
+        .pipe(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: true},
+					{cleanupIDs: false}
+				]
+			})
+		], {
+			verbose: true
+		}))
+        .pipe(gulp.dest(env.build + src.images))
+);
+
+gulp.task('fonts', () =>
+    gulp.src([env.source + src.fonts + '*.{eot,svg,ttf,woff,woff2}'], {base: ''})
+		.pipe(plumber({
+			errorHandler: notify.onError(errors)
+		}))
+        .pipe(gulp.dest(env.build + src.fonts))
+);
+
+gulp.task('sass-docs', () =>
+    gulp.src(env.source + src.css + '**/*.scss')
+    .pipe(sassdoc())
+);
+
+gulp.task('js-lint', () =>
+    gulp.src([env.source + src.js + 'source/app-*.js'])
+        .pipe(plumber({
+            errorHandler: notify.onError(errors)
+        }))
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish'))
+);
+
+gulp.task('html-lint', () =>
+    gulp.src([env.source + './*.html'])
+        .pipe(plumber({
+            errorHandler: notify.onError(errors)
+        }))
+        .pipe(htmllint())
+);
+
+gulp.task('css-lint', () =>
+	gulp.src([env.source + src.css + 'components/*.scss', env.source + src.css + 'objects/*.scss'])
+        .pipe(plumber({
+            errorHandler: notify.onError(errors)
+        }))
+        .pipe(scsslint({
+			config: '.scsslintrc'
+		}))
+		.pipe(scsslint.failReporter())
+);
+
+gulp.task('validate', ['js-hint', 'html-lint', 'css-lint']);
+
+gulp.task('assets',   ['sprites', 'svg', 'fonts', 'images']);
+
+gulp.task('docs',     ['sass-docs']);
+
+gulp.task('watch', ['html', 'js', 'css', 'assets', 'sync'], function(){
+    gulp.watch(env.source + src.css + '**/*.scss', ['css'])
+    gulp.watch([env.source + src.js + '**/*.js', '!./assets/js/application.js'], ['js'])
+    gulp.watch(env.source + '**/*.html', ['html'])
 });
 
-gulp.task('validate', ['js-hint', 'html-hint']);
-
-gulp.task('docs',    ['sass-docs']);
-
-gulp.task('default', ['watch']);
+gulp.task('default',  ['watch']);
